@@ -1,0 +1,39 @@
+<style>
+    .position {
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .img{
+      width: 70px;
+      height: 70px;
+      padding: 0;
+    }
+    .image{
+          width: 40px;
+          height: 40px;
+    }
+</style>
+{{#if existProducts}}
+       <table class="table">
+          <tr class="text-success"> 
+            <th class="font-weight-bold">Title</th> 
+            <th class="font-weight-bold">Price</th> 
+            <th class="font-weight-bold">Foto URL</th> 
+          </tr>
+         <tbody class="text-gray-700">
+          {{#each lista}}
+            <tr class="border-b-[1px] border-gray-200 cursor-pointer transition-colors hover:bg-gray-50">
+              <td class="pl-2 pr-14 sm:pr-48 py-2">{{this.title}}</td>
+              <td class="pr-14 sm:pr-48 py-2">{{this.price}}</td>
+              <td class="img"><img src={{this.thumbnail}} alt={{this.title}} class="image"/></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+       {{else}}
+    <h3 class="alert alert-warning">No se encontraron productos</h3>
+    {{/if}}
+    <br>
+    <a href="/" type="button" class="btn btn-primary position">Home</a>

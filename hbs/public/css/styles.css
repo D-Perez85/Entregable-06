@@ -1,0 +1,12 @@
+.jumbotron {
+    min-height: auto;
+}
+
+.botonera {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
